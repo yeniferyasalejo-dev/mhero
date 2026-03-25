@@ -55,7 +55,7 @@ a {
    Typography
    ============================ */
 .display-title {
-    font-size: clamp(3rem, 8vw, 7rem);
+    font-size: clamp(2rem, 4vw, 3.5rem);
     font-weight: 900;
     letter-spacing: -0.02em;
     line-height: 1;
@@ -182,8 +182,9 @@ a {
 }
 
 .logo-icon {
-    width: 36px;
-    height: 30px;
+    height: 36px;
+    width: auto;
+    object-fit: contain;
 }
 
 .logo-text {
@@ -322,7 +323,7 @@ a {
 }
 
 .hero-title {
-    font-size: clamp(3.5rem, 8vw, 6rem);
+    font-size: clamp(2.5rem, 5vw, 3.8rem);
     font-weight: 900;
     letter-spacing: -0.02em;
     line-height: 1;
@@ -330,19 +331,19 @@ a {
 }
 
 .hero-subtitle {
-    font-size: clamp(1rem, 2vw, 1.5rem);
-    font-weight: 300;
-    letter-spacing: 0.3em;
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+    font-weight: 400;
+    letter-spacing: 0.25em;
     text-transform: uppercase;
     color: var(--accent);
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
 
 .hero-desc {
-    font-size: clamp(1rem, 1.5vw, 1.15rem);
+    font-size: clamp(0.85rem, 1.2vw, 1rem);
     color: var(--text-secondary);
-    max-width: 520px;
-    line-height: 1.7;
+    max-width: 480px;
+    line-height: 1.6;
     margin-bottom: 32px;
 }
 
@@ -421,9 +422,10 @@ a {
     height: 85vh;
     min-height: 500px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-end;
+    justify-content: flex-start;
     overflow: hidden;
+    padding-bottom: 60px;
 }
 
 .full-image-bg {
@@ -446,15 +448,16 @@ a {
 .full-image-content {
     position: relative;
     z-index: 2;
-    text-align: center;
-    padding: 0 40px;
+    text-align: left;
+    padding: 0 60px;
+    max-width: 500px;
 }
 
 .display-subtitle {
-    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    font-size: clamp(0.85rem, 1.2vw, 1rem);
     color: var(--text-secondary);
-    max-width: 600px;
-    margin: 20px auto 0;
+    max-width: 400px;
+    margin: 12px 0 0;
     font-weight: 300;
 }
 
@@ -1044,9 +1047,11 @@ a {
 }
 
 .footer-logo {
-    width: 48px;
-    height: 40px;
+    height: 48px;
+    width: auto;
+    object-fit: contain;
     margin: 0 auto 8px;
+    display: block;
 }
 
 .footer-brand-text {
@@ -1271,12 +1276,12 @@ a {
 
 @media (max-width: 480px) {
     .hero-title {
-        font-size: 2.8rem;
+        font-size: 2rem;
     }
 
     .hero-subtitle {
-        font-size: 0.85rem;
-        letter-spacing: 0.2em;
+        font-size: 0.75rem;
+        letter-spacing: 0.18em;
     }
 
     .hero-buttons {
@@ -1293,6 +1298,11 @@ a {
     }
 
     .display-title {
-        font-size: 2.5rem;
+        font-size: 1.8rem;
+    }
+
+    .full-image-content {
+        padding: 0 24px;
+        max-width: 280px;
     }
 }
